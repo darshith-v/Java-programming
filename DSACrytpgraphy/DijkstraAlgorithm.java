@@ -10,7 +10,8 @@ public class DijkstraAlgorithm {
         distances.put(start, 0);
 
         Map<String, Integer> shortestPaths = new HashMap<>();
-        PriorityQueue<Map.Entry<String, Integer>> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(Map.Entry::getValue));
+        PriorityQueue<Map.Entry<String, Integer>> priorityQueue = new PriorityQueue<>(
+                Comparator.comparingInt(Map.Entry::getValue));
         priorityQueue.add(new AbstractMap.SimpleEntry<>(start, 0));
 
         while (!priorityQueue.isEmpty()) {
