@@ -1,7 +1,18 @@
 package javafile;
 
+import java.util.*;
+
 public class First {
+
+  public static void printName(String name) {
+    System.out.println(name);
+    return;
+  }
+
   public static void main(String[] args) {
-    System.out.println("hello1");
+    Scanner sc = new Scanner(System.in);
+    String name = sc.next();
+
+    printName(name);
   }
 }
