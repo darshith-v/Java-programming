@@ -1,33 +1,35 @@
 package day_06;
 
-import java.util.Scanner;
+import java.util.*;
 
-/**
- * insert_into_array
- */
+
 public class insert_into_array {
 
-  public static void main(String[] args) {
-    int n = 6;
-    int arr[] = new int[n];
-    int arr1[] = new int[1];
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter element to insert: ");
-    int ele = sc.nextInt();
+        int arr1[] = { 1, 2, 3, 4, 5 };
+        int arr2[] = { 6, 7, 8, 9, 10 };
 
-    System.out.println("Enter Location to insert: ");
-    int loc = sc.nextInt();
+        int newArray[] = new int[arr1.length + arr2.length];
 
-    for (int i = n - 1; i >= loc; i--) {
-      arr[i + 1] = arr[i];
+        System.out.println("Enter the position: ");
+        int pos = sc.nextInt();
+
+        for (int i = 0; i < pos; i++) {
+            newArray[i] = arr1[i];
+        }
+
+        for (int i = 0; i < arr2.length; i++) {
+            newArray[pos + i] = arr2[i];
+        }
+
+        for (int i = pos; i < arr1.length; i++) {
+            newArray[arr2.length + i] = arr1[i];
+        }
+
+        for (int num : newArray) {
+            System.out.print(num+" ");
+        }
     }
-
-    for (int i = n; i < n; i++) {
-      arr[loc + i] = arr1[i];
-    }
-
-    arr[loc] = ele;
-    System.out.println(ele);
-  }
 }
