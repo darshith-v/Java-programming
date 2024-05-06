@@ -16,6 +16,10 @@ public class stack {
   }
 
   static void push(int data) {
+    if (top == max - 1) {
+      System.out.println("stack overflow");
+      return;
+    }
     top = top + 1;
     arr[top] = data;
     System.out.println(Arrays.toString(arr));

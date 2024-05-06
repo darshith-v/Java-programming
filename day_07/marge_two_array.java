@@ -1,6 +1,6 @@
 package day_07;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class marge_two_array{
   public static void main(String[] args) {
@@ -19,9 +19,8 @@ public class marge_two_array{
       b[i] = sc.nextInt();
       arr[i + a.length] = b[i];
     }
-
-    for (int num : arr) {
-      System.out.print(num + " ");
-    }
+    
+    System.out.println(Arrays.toString(arr));
+    
   }
 }
