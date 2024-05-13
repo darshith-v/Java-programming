@@ -35,6 +35,12 @@ public class isFull_isEmpty {
           System.out.println("\n");
           break;
 
+        case 3:
+          data = isPeek();
+          System.out.println("Top element is: " + data);
+          System.out.println("\n");
+          break;
+
         default:
           break;
       }
@@ -53,6 +59,13 @@ public class isFull_isEmpty {
       return true;
     else
       return false;  
+  }
+
+  public static int isPeek() {
+    if (isEmpty()) {
+      System.out.println("Stack overflowed.");
+    }
+    return arr[top];
   }
 
   public static void push(int data) {
