@@ -1,6 +1,8 @@
-package stack;
+package stack.problems;
 
-public class problem_1 {
+// write a program to implement a stack in an array stack_arr[] using stack_arr[0] as the top element
+
+public class top_element {
   
   static int MAX = 5;
 
