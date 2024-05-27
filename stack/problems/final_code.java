@@ -1,18 +1,54 @@
 package stack.problems;
 
+import java.util.*;
+
 public class final_code {
   static int max = 5;
   static int stack_arr[] = new int[max];
   static int first = -1;
 
   public static void main(String[] args) {
-    push(33);
-    push(66);
-    push(69);
-    push(99);
-    push(90);
-    pop();
-    print();
+    Scanner sc = new Scanner(System.in);
+
+    int choice, data;
+    while (true) {
+      System.out.println("1. Push");
+      System.out.println("2. Pop");
+      System.out.println("3. Print the top element: ");
+      System.out.println("4. Print the top element: ");
+      System.out.println("5. Quit");
+      System.out.println("6. Please enter your choices: ");
+      choice = sc.nextInt();
+
+      switch (choice) {
+        case 1:
+          System.out.println("Enter the element to be pushed : ");
+          data = sc.nextInt();
+          push(data);
+          break;
+
+        case 2:
+          data = pop();
+          System.out.println("Deleted element is " + data);
+          break;
+
+        case 3:
+          System.out.println("The topmost element of the stack" + peak());
+          break;
+
+        case 4:
+          print();
+          break;
+
+        case 5:
+          System.exit(1);
+
+        default:
+          System.out.println("wrong choice");
+
+      }
+    }
+    
   }
   
   static void push(int data) {
