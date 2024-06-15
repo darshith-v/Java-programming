@@ -33,7 +33,7 @@ public class final_code {
           break;
 
         case 3:
-          System.out.println("The topmost element of the stack" + peak());
+          System.out.println("The topmost element of the stack" + peek());
           break;
 
         case 4:
@@ -65,6 +65,8 @@ public class final_code {
   static int pop() {
     if (isEmpty()) {
       System.out.println("Stack Empty");
+      System.exit(0);
+
     }
     int i, value;
     value = stack_arr[0];
@@ -77,6 +79,7 @@ public class final_code {
   static void print() {
     if (isEmpty()) {
       System.out.println("stack Empty");
+      System.exit(0);
     }
     for (int i = 0; i <= first; i++) {
       System.out.println(stack_arr[i]);
@@ -95,6 +98,14 @@ public class final_code {
       return true;
     else
       return false;
+  }
+
+  static int peek(){
+    if(isEmpty()){
+      System.out.println("Sytem underflow\n");
+      System.exit(0);
+    }
+    return stack_arr[0];
   }
 
 }
