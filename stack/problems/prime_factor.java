@@ -11,8 +11,7 @@ public class prime_factor {
   
   static void push(int data) {
     first += 1;
-    for (int i = 0; i < max; i++) {
-      stack_arr[i] += stack_arr[i + 1];
-    }
+    stack_arr[first] = data;
+    
   }
 }
