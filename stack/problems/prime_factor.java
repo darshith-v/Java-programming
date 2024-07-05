@@ -3,7 +3,7 @@ package stack.problems;
 import java.util.Scanner;
 
 public class prime_factor {
-  static int max = 100;
+  static int max = 15;
 
   static int first = -1;
   static int stack_arr[] = new int[max];
@@ -14,6 +14,8 @@ public class prime_factor {
 
     int number = sc.nextInt();
     prime_fac(number);
+
+    displayFactor();
   }
   
   static void push(int data) {
@@ -23,13 +25,19 @@ public class prime_factor {
   
   static void prime_fac(int num) {
     int i = 2;
-    while (i != 1) {
+    while (i > 1) {
       while (num % i == 0) {
         push(i);
         num = num / i;
       }
       i++;
     }
-    
+  }
+
+  static void displayFactor() {
+    for (int i = 0; i <= first; i++) {
+      System.out.print(stack_arr[i] + " ");
+    }
+    System.out.println();
   }
 }
