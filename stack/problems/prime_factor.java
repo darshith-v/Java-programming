@@ -35,7 +35,7 @@ public class prime_factor {
   }
 
   static void displayFactor() {
-    for (int i = 0; i <= first; i++) {
+    for (int i = first; i >= 0; i--) {       // desending order
       System.out.print(stack_arr[i] + " ");
     }
     System.out.println();
