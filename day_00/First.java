@@ -1,4 +1,4 @@
-package javafile;
+package day_00;
 
 import java.util.*;
 
