@@ -13,10 +13,8 @@ public class quadratic_equation {
     Double c = sc.nextDouble();
     Double D = (b * b) - (4 * a * c);
 
-    System.out.println("A value: " +a);
-    System.out.println("B value: " +b);
-    System.out.println("C value: " +c);
-    System.out.println("D value: " +D);
+    System.out.println("A value: " + a + "\n B value: " + b +"\n C value: "+ c +"\n D value: "+ D);
+    
     
     if (D > 0) {
       Double r1 = -b + (Math.sqrt(D)) / (2 * a);
