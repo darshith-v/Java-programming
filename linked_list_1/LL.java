@@ -43,9 +43,9 @@ class LL {
       LL outer = new LL();
       LinkedList list = outer.new LinkedList();
 
-      list.addFirst(3);
-      list.addFirst(2);
       list.addFirst(1);
+      list.addFirst(2);
+      list.addFirst(3);
 
       list.printList();
     }
